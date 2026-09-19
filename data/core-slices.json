@@ -1,4 +1,5 @@
 {
+  "schemaVersion": 2,
   "samples": [
     {
       "id": "CORE-001",
@@ -7,27 +8,30 @@
       "coreBox": "BX-09",
       "depth": "128.4-128.8m",
       "owner": "陆川",
-      "status": "制片中",
-      "delivery": "未交付",
+      "contaminated": false,
+      "quarantined": false,
       "slices": [
         {
           "id": "SL-001-A",
           "method": "茜素红染色",
-          "observation": "",
-          "status": "研磨",
-          "logs": [
-            {
-              "at": "2026-06-12T10:00:00.000Z",
-              "step": "取样",
-              "note": "截取含矿化条带位置"
-            },
-            {
-              "at": "2026-06-13T11:20:00.000Z",
-              "step": "切割",
-              "note": "完成粗切"
-            }
-          ]
+          "delivery": "未交付",
+          "deliveredAt": null,
+          "frozen": false,
+          "frozenReason": "",
+          "frozenAt": null,
+          "affected": false,
+          "scrapped": false,
+          "scrappedAt": null,
+          "createdAt": "2026-06-12T10:00:00.000Z"
         }
+      ],
+      "records": [
+        { "seq": 1, "sliceId": "SL-001-A", "step": "取样", "note": "截取含矿化条带位置", "at": "2026-06-12T10:00:00.000Z", "state": "有效", "correction": false },
+        { "seq": 2, "sliceId": "SL-001-A", "step": "切割", "note": "完成粗切", "at": "2026-06-13T11:20:00.000Z", "state": "有效", "correction": false }
+      ],
+      "events": [
+        { "at": "2026-06-12T10:00:00.000Z", "type": "创建原片", "detail": "登记原片 CORE-001（东岭铜矿薄片）" },
+        { "at": "2026-06-12T10:00:00.000Z", "type": "派生切片", "detail": "派生片 SL-001-A 绑定原片 CORE-001" }
       ]
     }
   ]
